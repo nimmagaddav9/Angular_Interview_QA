@@ -201,25 +201,136 @@ With @Injectable decorator one service can be used by another service.
 
 Section 7 -Lifecycle Hooks
 33. What are Parent-Child Components?
+Suppose Parent Component with input field, button.
+create ng g c child
+ng serve
  
 34.  What are Lifecycle Hooks in Angular?
-35. What is a Constructor in Angular?
-36. What is ngOnInit life cycle hook in Angular?
-37. What is the difference between constructor and ngOnInit?
+A component from creation to destruction goes through several stages and these stages are life cycle hooks.
+The Stages will cover activities like:
+    1. Component instantiating.
+    2. Rendering the component html view.
+    3. Creating the Child Components(if required).
+    4. Destroying the component.
 
-Section 8 
+constructor: It is a default method of the typescript class that is executed when the class is instantiated. 
+It always run before any angular hook and it is not part of lifecycle hooks.
+
+ngOnChanges : called when input property changes.
+
+ngOnInit: called when the component is created.
+
+ngDoCheck : if changes not detected then it is called.
+
+ngAfterContentInit
+ngAfterContentChecked
+ngAfterViewInit
+ngAfterViewChecked  ---> 4 of them are called for component children.
+
+ngOnDestroy: called when the component is destroyed.
+
+
+35. What is a Constructor in Angular?
+The Constructor is a method in a Typescript class that automatically gets called when the class is being instantiated.
+Constructor always run before any angular hook and it is not part of Lifecycle Hooks.
+Constructor is widely used to inject dependencies(services) into the component class.
+
+Syntax: 
+export class SampleComponent implements onInit {
+    constructor(){
+        console.log("inside constructor");
+    }
+        ngOnInit():void{
+            console.log("Inside ngOnInit");
+        }
+    }
+
+
+36. What is ngOnInit life cycle hook in Angular?
+1. NgOnInit signals the activation of the created component.
+2. This is the second hook and called after ngOnChanges.
+3. NgOnint called only once during lifecyle.
+4. By default, present in the component.
+
+37. What is the difference between constructor and ngOnInit?
+ngOnInit                                                
+1. NgOnInit is an Angular Lifecycle hook which signals the activation of the created component.
+2. ngOnInit is called after ngOnChanges lifecycle-hook.
+3. When ngOnInit called, everything about component is already ready, so it's use is to perform most of the business logic on component.
+
+Constructor
+1. The Constructor is a method in a TypeScript class, that automatically gets called when the class is being instantiated.
+2. Constructor is called before any lifecycle-hook.
+3. When Constructor called, everything in component is not ready, so it's mostly used for injecting dependencies only.
+
+
+Section 8 Observable/ HttpClient/RxJS
+
 38. What are Asynchronous operations?
- What is the difference between Promise and Observable?
- What is RxJS?
-What is Observable? How to implement Observable
-What is the role of HttpClient in Angular?
+Observables are used to perfrom Asynchronous operations and handle asynchronous data.
+4Tasks run at same time.
+
+
+39. What is the difference between Promise and Observable?
+Observables
+1. Emit multiple values over a period of time. also called streaming of data.
+2. Are lazy: they're not executed until we subscribe to them using the subscribe() method.
+3. Have subscriptions that are cancellable using the unSubscribe() method.
+
+Promise
+1. Emit a single value at a time.
+2. Are not lazy: execute immediately after creation.
+3. Are not cancellable.
+
+40. What is RxJS?
+RxJS is a library for composing asynchronous and event-based programs by using observable sequences.
+RxJS is a JavaScript library, that allow us to work with asynchronous data stream with the help of Observables.
+Observables introduced by RxJS Library.
+RxJS stands for Reactive Extensions for JavaScript.
+
+41. What is Observable? How to implement Observable
+Observables are used to stream data to multiple components.
+It's a 3 step process:
+1. Import Observable from RxJS Library.
+2. Create Observable & Emit Data.
+3. Finally subscribe the Data.
+
+42. What is the role of HttpClient in Angular?
+HttpClient is a built-in service class available in Angular.
+@angular/common/http package.
+Performs HTTP requests.
 
 Section 9 
-What is Typescript? Or What is the difference between Typescript and Javascript?
- What is the difference between let and var keyword?
-What is Type annotation?
-What are Built in/ Primitive and User-Defined/ Non-primitive Types in Typescript?
-What is “any” type in Typescript?
-What is Enum type in Typescript?
-What is Type Assertion in Typescript?
-What are Arrow Functions in Typescript?
+43. What is Typescript? Or What is the difference between Typescript and Javascript?
+1. Tyescript is a strongly typed language. Ex: let someValue: string="test message";
+2. Tyescript is a superset of JavaScript.
+3. It has Object oriented features.
+4. Detect error at compile time.
+
+44. What is the difference between let and var keyword?
+Var has global scope inside function.
+let keyword scope is limited to the block only, from where it is declared.
+
+45. What is Type annotation?
+Definition: Type annotation is assigning a variable or object.
+a type which will show the compile time error,
+if we will try to assign the variable a different type.
+
+46. What are Built in/ Primitive and User-Defined/ Non-primitive Types in Typescript?
+Built-in Data types are used to store simple data.
+User-Defined Types are used to store complex data.
+
+47. What is “any” type in Typescript?
+Definition - When a value is of type any,
+then no typechecking will be done by compiler and
+the flexibility is there to do anything with the variable.
+
+48. What is Enum type in Typescript?
+Definition - Enums allows to define a set of named constants.
+
+49. What is Type Assertion in Typescript?
+Definition: Type assertion is a technique that informs the compiler about the type of a variable.
+
+50. What are Arrow Functions in Typescript?
+Arrow functions are the shorthand Syntax
+for defining the anonymous function
