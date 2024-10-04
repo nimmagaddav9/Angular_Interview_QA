@@ -41,7 +41,7 @@ A selector is used to identify each component uniquely into the component tree.
 A template is a HTML view of an Angular component.
 
 8. What is Module in Angular? What is app.module.ts file?
-Module is a place where you can group the components, directives, pipes amd services which are ralted to the application.
+Module is a place where you can group the components, directives, pipes amd services which are related to the application.
 app.module.ts file --> Root module.
 @NgModule({
     declarations:[
@@ -334,3 +334,147 @@ Definition: Type assertion is a technique that informs the compiler about the ty
 50. What are Arrow Functions in Typescript?
 Arrow functions are the shorthand Syntax
 for defining the anonymous function
+
+
+=============================================================================================
+
+Angular IQ
+ 
+1. What is CSS Float Property?
+The float property specifies how an element should float.
+ 
+2. What is CSS Position?
+The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
+ 
+3. HTML5 Semantic Web?
+A semantic element clearly describes its meaning to both the browser and the developer.
+Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
+Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+ 
+4. Difference b/w local storage and session storage
+Session storage is temporary which exists as long as the current window is opened and data gets lost when window 
+is closed, where as Local Storage is persistant and remains intact across sessions unless anyone deletes it.
+ 
+5.What is Javascript function?
+Functions are one of the fundamental building blocks in JavaScript.
+Particular business logic called as function. 
+ 
+6.What is the scope of the variable?
+Scope determines the accessibility (visibility) of variables.
+ 
+In JavaScript there are two types of scope:
+ 
+Local scope
+Global scope
+JavaScript has function scope: Each function creates a new scope.
+ 
+Scope determines the accessibility (visibility) of these variables.
+ 
+Variables defined inside a function are not accessible (visible) from outside the function.
+ 
+7. What is Callback, closure?
+Passing "one function" to "another function" as an argument called as "CallBack".
+if any inner function accessing the outer function data, then such scenario called as closure.
+ 
+ 
+8.explain crud operations in angular?
+CRUD operations in Angular refer to the four basic functions for managing data: Create, Read, Update, and Delete.
+Create
+Creating new data involves sending a POST request to the server API. In Angular, this is typically done using the HttpClient service.
+
+
+9.why we use bootstrap? explain some bootstrap class?
+Bootstrap is a framework to help you design websites faster and easier. 
+It includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, 
+modals, image carousels, etc. It also gives you support for JavaScript plugins.  
+ 
+10.explain directives
+To enhance view capabilities or view features we go for directives. 
+Types of Directives – 2 types 
+Predefined Directives --- Directives given by the Angular framework 
+Custom Directives --- Directives developed by users
+ 
+11.explain routing?  Navigating from 1 component to another component is called routing. 
+ 
+12.Events in HTMl?
+HTML has the ability to let events trigger actions in a browser, like starting a JavaScript when a user clicks on an element.
+ 
+ 
+13.differnce between display:block and visibility hidden?
+display:none will hide the element and collapse the space is was taking up, 
+whereas visibility:hidden will hide the element and preserve the elements space.
+ 
+14.difference between var, let, const keyword?
+ 
+                             var                                         let 
+ 
+    1) ES1                                                          1) ES6 
+    2) duplicate variables allowed                                  2) duplicate variables not allowed 
+    3) won't obey scope rule                                        3) obeys scope rule 
+    4) global polluting issue raised                                4) we can overcome global polluting issue
+    5) variable hoisting raised                                     5) we can overcome variable hoisting  
+    6) var keyword is the global scope                              6) let keyword is the block scoped member 
+       member 
+//const keyword 
+ 
+//const keyword used to declare the variables 
+ 
+//const keyword introduced in "ES6" 
+ 
+//in const keyword "reinitialization" not possible 
+  
+15.types of Binding in angular?
+There are four different types of ways through which we can do data bindings in Angular 2 namely 
+event binding, 
+unidirectional binding (i.e. one-way binding), 
+bi-directional binding (i.e. two-way binding), 
+and the interpolation.
+ 
+ 
+16.Lifecycle hooks in Angular?
+ 
+ngOnChanges: Called every time a data-bound input property changes. 
+It’s called a first time before the ngOnInit hook. The hook receives a SimpleChanges object that contains the previous and current values for the data-bound inputs properties. This hook gets called often, so it’s a good idea to limit the amount of processing it does.
+ 
+ngOnInit: Called once upon initialization of the component.
+ 
+ngDoCheck: Use this hook instead of ngOnChanges for changes that Angular doesn’t detect. It gets called at every change detection cycle, so keeping what it does to a minimum is important for performance.
+ 
+ngAfterContentInit: Called after content is projected in the component.
+ 
+ngAfterContentChecked: Called after the projected content is checked.
+ 
+ngAfterViewInit: Called after a component’s view or child view is initialized.
+ 
+ngAfterViewChecked: Called after a component’s view or child view is checked.
+ 
+ngOnDestroy: Called once when the component is destroyed and a good hook to use to cleanup and unsubscribe from observables.
+ 
+ 
+ 
+17.differnce between promise and observable?
+ 
+Promises Establishes the communication between "producer" and "consumer". 
+       - Promises also called as "special javascript objects". 
+       - we will create Promises by using "Promise" class constructor. 
+        - Promises have 3 states 
+            1) success  (resolve) 
+            2) error    (reject) 
+            3) pending 
+          - we will consume promises by using "then()" 
+ 
+a Promise is always asynchronous,
+while an Observable can be either synchronous or asynchronous,
+a Promise can provide a single value,
+whereas an Observable is a stream of values (from 0 to multiple values), 
+you can apply RxJS operators to an Observable to get a new tailored stream
+ 
+=====================================================================================================
+
+What is | ? 
+In JavaScript, the | symbol is primarily used as the bitwise OR operator.
+Pipes in Angular are a way to transform data in your template
+they are simple functions that accept an input value and return a transformed value. 
+Pipes are used in template expressions to modify the way data is displayed.
+
+What is arrow function ?   Arrow functions acts like "callbacks" to receive the response from server.
