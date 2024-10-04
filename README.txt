@@ -478,3 +478,11 @@ they are simple functions that accept an input value and return a transformed va
 Pipes are used in template expressions to modify the way data is displayed.
 
 What is arrow function ?   Arrow functions acts like "callbacks" to receive the response from server.
+
+React                                           Angular
+Architecture: only the View of MVC              Complete MVC
+Rendering: Server Side Rendering                Client-side rendering
+DOM: use Virtual DOM                            uses Real DOM
+Data Binding: 1-way data binding                2-way data binding
+Debugging: Compile-time Debugging               Runtime debugging
+Author: Facebook                                Google
