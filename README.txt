@@ -73,6 +73,7 @@ App-component or app-root component is the html which you will see finally.
 When the Angular Web application will start then the first module launched is the bootstrapped module and same is true for the bootstrapped component also.
 
 Data Binding
+
 11. What is Data Binding in Angular?
 Data binding is the way to communicate between your typescript code of your component and your html view.
 TypeScript Code(app.component.ts)        -------->      HTML Template(app.component.html)view
@@ -131,17 +132,21 @@ ngClass directive adds and removes CSS Classes on an HTML element.
 
 Component Directive
 Component Directive is responsible for showing the first whole view. It is the mosed used one.
-Starts with @ Sign
+Starts with @ Sign.
+Like: @Component
 
 Structural Directive
 Structural directive is responsible for adding and deleting html elements in the view.
 Starts with * sign.
+Like: *ngIf, *ngFor, *ngSwitch
 
 Attribute Directive
 Attribute directive is responsible for changing the appearance of view by adding or removing styles/css classes of the html elements.
 Set inside square brackets. []
+Like: [ngClass], [ngStyle]
 
-Section 5 
+Section 5 Decorator & Pipes
+
 23.What is Decorator?
 Angular decorators store metadata about a class, method, or property.
 Metadata is "data that provides information about other data".
@@ -149,7 +154,7 @@ All decorators are represented with @ symbol.
 
 24. What are the types of Decorator?
 4 types
-Class Decorators Ex: @NgModule
+Class Decorators Ex: @NgModule, @Component
 
 Property Decorators Ex: @Input, @Output
 
@@ -158,17 +163,16 @@ Method Decorators Ex: HostListner
 Parameter Decorators Ex: @Inject, @Self
 
 
-
 25. What are Pipes? What are the types of Pipes & Parameterized Pipes?
 Pipes are simple functions which accept an input value and return a transformed value.
 
                         Angular Pipes
             Build-in Pipe                   Custom Pipe
-
+lower-case, upper-case (conversion)
 When we pass any parameters to the pipes, it is called Parameterized pipes.
 
 26. What is Chaining Pipes?
-The chaining pipes use multiple pipes on a data input.
+The chaining pipes use multiple pipes on a data input. Ex: {{dob | date | uppercase}}
 
 
 Section 6
